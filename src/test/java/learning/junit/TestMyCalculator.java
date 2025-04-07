@@ -22,7 +22,7 @@ class TestMyCalculator {
     }
 
     @Test
-    void testSubstract(){
+    void testSubtract(){
         assertEquals(1 , myCalculator.subtract(3,2), "Expected 3 - 2 to equal 1");
         assertNotEquals(6 , myCalculator.subtract(3,2), "Expected 3 - 2 not to equal 6");
     }
