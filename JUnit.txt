@@ -1,0 +1,42 @@
+Assertions:
+- assertEquals( expected, actual, "message" )
+- assertNotEquals( expected, actual, "message" )
+- assertNull( actual, "message" )
+- assertNotNull( actual, "message" )
+- assertSame( object1, object2, "message" )
+- assertNotSame( object1, object2, "message" )
+- assertTrue( condition, "message" )
+- assertFalse( condition, "message" )
+- assertArrayEquals( expectedArray, actualArray, "message" )
+- assertIterableEquals( expectedIterable, actualIterable, "message" )
+- assertLinesMatch( expectedLines, actualLines, "message" )
+- assertThrows( ExpectionExpected.class , () --> {actualMethod(...) ;} ,"message" )
+- assertDoesNotThrow( () --> { actualMethod(...) ;}, "message" )
+- assertTimeoutPreemptively( Duration.ofSeconds() , () --> { actualMethod() ; }, "message" );
+
+Annotations:
+- @Test
+- @BeforeEach
+- @AfterEach
+- @BeforeAll
+- @AfterAll
+- @DisplayName
+- @DisplayNameGeneration(DisplayNameGenerator.Method.class)
+	method : 
+		+ Simple
+		+ ReplaceUnderscores
+		+ IndicativeSentences
+- @TestMethodOrder(MethodOrderer.Method.class)
+	method:
+		+ DisplayName
+		+ Random
+		+ Order(n)
+- @Disabled( "message" )
+- @EnabledOnOs( OS.WINDOWS )
+- @EnabledOnOs( OS.WINDOWS, OS.MAC, OS.LINUX )
+- @EnabledOnJre( JRE.X )
+- @EnabledForJreRange( min = JRE.X , max = JRE.Y )
+- @EnabledIfSystemProperty( named="x", matches = "y" ) // deployment.mode = ci-cd
+- @EnabledIfEnvironmentVariable( named = "x" , matches = "y" ) // APP_ENV = dev
+
+
